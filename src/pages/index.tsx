@@ -26,9 +26,7 @@ function handleFilterByCategory(category:string) {
   )
 
 }
-function handleShowAll(){
-  setFilteredEmojis(emojisData.slice(0,1500))
-}
+
 
 
   return (
@@ -84,7 +82,7 @@ function handleShowAll(){
       emoji='🚩'
       group={"Flags"} />
       <CategoryCard
-      handleFilter={handleShowAll}
+      handleFilter={()=>setFilteredEmojis(emojisData.slice(0,1500))}
       emoji='♾️'
       group={"Show All"} />
 
